@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/smilewater.iml" filepath="$PROJECT_DIR$/smilewater.iml" />
-      <module fileurl="file://$PROJECT_DIR$/android/smilewater_android.iml" filepath="$PROJECT_DIR$/android/smilewater_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/smilewater2.iml" filepath="$PROJECT_DIR$/smilewater2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/smilewater2_android.iml" filepath="$PROJECT_DIR$/android/smilewater2_android.iml" />
     </modules>
   </component>
 </project>
