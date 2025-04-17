@@ -13,38 +13,38 @@
 13         to allow setting breakpoints, to provide hot reload, etc.
 14    -->
 15    <uses-permission android:name="android.permission.INTERNET" />
-15-->D:\UCL\CASA0015\0015\smilewater2\android\app\src\debug\AndroidManifest.xml:6:5-66
-15-->D:\UCL\CASA0015\0015\smilewater2\android\app\src\debug\AndroidManifest.xml:6:22-64
+15-->D:\UCL\CASA0015\CW\SmileWater\android\app\src\debug\AndroidManifest.xml:6:5-66
+15-->D:\UCL\CASA0015\CW\SmileWater\android\app\src\debug\AndroidManifest.xml:6:22-64
 16    <uses-permission
-16-->D:\UCL\CASA0015\0015\smilewater2\android\app\src\main\AndroidManifest.xml:2:1-64
+16-->D:\UCL\CASA0015\CW\SmileWater\android\app\src\main\AndroidManifest.xml:2:1-64
 17        android:name="android.permission.BLUETOOTH"
-17-->D:\UCL\CASA0015\0015\smilewater2\android\app\src\main\AndroidManifest.xml:2:18-61
+17-->D:\UCL\CASA0015\CW\SmileWater\android\app\src\main\AndroidManifest.xml:2:18-61
 18        android:maxSdkVersion="30" />
-18-->[:reactive_ble_mobile] D:\UCL\CASA0015\0015\smilewater2\build\reactive_ble_mobile\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:10:9-35
+18-->[:reactive_ble_mobile] D:\UCL\CASA0015\CW\SmileWater\build\reactive_ble_mobile\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:10:9-35
 19    <uses-permission
-19-->D:\UCL\CASA0015\0015\smilewater2\android\app\src\main\AndroidManifest.xml:3:1-70
+19-->D:\UCL\CASA0015\CW\SmileWater\android\app\src\main\AndroidManifest.xml:3:1-70
 20        android:name="android.permission.BLUETOOTH_ADMIN"
-20-->D:\UCL\CASA0015\0015\smilewater2\android\app\src\main\AndroidManifest.xml:3:18-67
+20-->D:\UCL\CASA0015\CW\SmileWater\android\app\src\main\AndroidManifest.xml:3:18-67
 21        android:maxSdkVersion="30" />
-21-->[:reactive_ble_mobile] D:\UCL\CASA0015\0015\smilewater2\build\reactive_ble_mobile\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:13:9-35
+21-->[:reactive_ble_mobile] D:\UCL\CASA0015\CW\SmileWater\build\reactive_ble_mobile\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:13:9-35
 22    <uses-permission
-22-->D:\UCL\CASA0015\0015\smilewater2\android\app\src\main\AndroidManifest.xml:4:1-69
+22-->D:\UCL\CASA0015\CW\SmileWater\android\app\src\main\AndroidManifest.xml:4:1-69
 23        android:name="android.permission.BLUETOOTH_SCAN"
-23-->D:\UCL\CASA0015\0015\smilewater2\android\app\src\main\AndroidManifest.xml:4:18-66
+23-->D:\UCL\CASA0015\CW\SmileWater\android\app\src\main\AndroidManifest.xml:4:18-66
 24        android:usesPermissionFlags="neverForLocation" />
 24-->[com.polidea.rxandroidble2:rxandroidble:1.16.0] C:\Users\27746\.gradle\caches\8.10.2\transforms\e10aa1fcd389b7e8beeca0ce74fd9c9d\transformed\jetified-rxandroidble-1.16.0\AndroidManifest.xml:24:9-55
 25    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
-25-->D:\UCL\CASA0015\0015\smilewater2\android\app\src\main\AndroidManifest.xml:5:1-72
-25-->D:\UCL\CASA0015\0015\smilewater2\android\app\src\main\AndroidManifest.xml:5:18-69
+25-->D:\UCL\CASA0015\CW\SmileWater\android\app\src\main\AndroidManifest.xml:5:1-72
+25-->D:\UCL\CASA0015\CW\SmileWater\android\app\src\main\AndroidManifest.xml:5:18-69
 26    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-26-->D:\UCL\CASA0015\0015\smilewater2\android\app\src\main\AndroidManifest.xml:6:1-75
-26-->D:\UCL\CASA0015\0015\smilewater2\android\app\src\main\AndroidManifest.xml:6:18-72
+26-->D:\UCL\CASA0015\CW\SmileWater\android\app\src\main\AndroidManifest.xml:6:1-75
+26-->D:\UCL\CASA0015\CW\SmileWater\android\app\src\main\AndroidManifest.xml:6:18-72
 27    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Android 12+ 需要声明 -->
-27-->D:\UCL\CASA0015\0015\smilewater2\android\app\src\main\AndroidManifest.xml:7:1-77
-27-->D:\UCL\CASA0015\0015\smilewater2\android\app\src\main\AndroidManifest.xml:7:18-74
+27-->D:\UCL\CASA0015\CW\SmileWater\android\app\src\main\AndroidManifest.xml:7:1-77
+27-->D:\UCL\CASA0015\CW\SmileWater\android\app\src\main\AndroidManifest.xml:7:18-74
 28    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
-28-->D:\UCL\CASA0015\0015\smilewater2\android\app\src\main\AndroidManifest.xml:10:1-74
-28-->D:\UCL\CASA0015\0015\smilewater2\android\app\src\main\AndroidManifest.xml:10:18-71
+28-->D:\UCL\CASA0015\CW\SmileWater\android\app\src\main\AndroidManifest.xml:10:1-74
+28-->D:\UCL\CASA0015\CW\SmileWater\android\app\src\main\AndroidManifest.xml:10:18-71
 29    <!--
 30 Required to query activities that can process text, see:
 31         https://developer.android.com/training/package-visibility and
@@ -53,16 +53,16 @@
 34         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin.
 35    -->
 36    <queries>
-36-->D:\UCL\CASA0015\0015\smilewater2\android\app\src\main\AndroidManifest.xml:53:5-58:15
+36-->D:\UCL\CASA0015\CW\SmileWater\android\app\src\main\AndroidManifest.xml:53:5-58:15
 37        <intent>
-37-->D:\UCL\CASA0015\0015\smilewater2\android\app\src\main\AndroidManifest.xml:54:9-57:18
+37-->D:\UCL\CASA0015\CW\SmileWater\android\app\src\main\AndroidManifest.xml:54:9-57:18
 38            <action android:name="android.intent.action.PROCESS_TEXT" />
-38-->D:\UCL\CASA0015\0015\smilewater2\android\app\src\main\AndroidManifest.xml:55:13-72
-38-->D:\UCL\CASA0015\0015\smilewater2\android\app\src\main\AndroidManifest.xml:55:21-70
+38-->D:\UCL\CASA0015\CW\SmileWater\android\app\src\main\AndroidManifest.xml:55:13-72
+38-->D:\UCL\CASA0015\CW\SmileWater\android\app\src\main\AndroidManifest.xml:55:21-70
 39
 40            <data android:mimeType="text/plain" />
-40-->D:\UCL\CASA0015\0015\smilewater2\android\app\src\main\AndroidManifest.xml:56:13-50
-40-->D:\UCL\CASA0015\0015\smilewater2\android\app\src\main\AndroidManifest.xml:56:19-48
+40-->D:\UCL\CASA0015\CW\SmileWater\android\app\src\main\AndroidManifest.xml:56:13-50
+40-->D:\UCL\CASA0015\CW\SmileWater\android\app\src\main\AndroidManifest.xml:56:19-48
 41        </intent>
 42    </queries>
 43

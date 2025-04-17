@@ -27,7 +27,9 @@ class HistoryPage extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const HistoryRecordsListPage()),
+                  MaterialPageRoute(
+                    builder: (context) => const HistoryRecordsListPage(),
+                  ),
                 );
               },
               child: Card(
@@ -81,27 +83,27 @@ class HistoryPage extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 0,
-        onTap: (index) {
-          if (index == 1) Navigator.pushNamed(context, '/home');
-          else if (index == 2) Navigator.pushNamed(context, '/profile');
-        },
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.history_edu),
-            label: 'History',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home_rounded),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.emoji_emotions),
-            label: 'Me',
-          ),
-        ],
-      ),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   currentIndex: 0,
+      //   onTap: (index) {
+      //     if (index == 1) Navigator.pushNamed(context, '/home');
+      //     else if (index == 2) Navigator.pushNamed(context, '/profile');
+      //   },
+      //   items: const [
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.history_edu),
+      //       label: 'History',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.home_rounded),
+      //       label: 'Home',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.emoji_emotions),
+      //       label: 'Me',
+      //     ),
+      //   ],
+      // ),
     );
   }
 }

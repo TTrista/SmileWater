@@ -590,7 +590,7 @@
             "outputFile": "com.example.smilewater2.app-debug-26:/values-night-v8_values-night-v8.arsc.flat",
             "map": [
                 {
-                    "source": "D:\\UCL\\CASA0015\\0015\\smilewater2\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "D:\\UCL\\CASA0015\\CW\\SmileWater\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
@@ -829,7 +829,24 @@
                     }
                 },
                 {
-                    "source": "D:\\UCL\\CASA0015\\0015\\smilewater2\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "C:\\Users\\27746\\.gradle\\caches\\8.10.2\\transforms\\e0d9d3675465ff69d847e2f781f20c61\\transformed\\jetified-startup-runtime-1.1.1\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "82",
+                        "endOffsets": "133"
+                    },
+                    "to": {
+                        "startLines": "146",
+                        "startColumns": "4",
+                        "startOffsets": "7229",
+                        "endColumns": "82",
+                        "endOffsets": "7307"
+                    }
+                },
+                {
+                    "source": "D:\\UCL\\CASA0015\\CW\\SmileWater\\android\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
@@ -845,23 +862,6 @@
                         "endLines": "158,161",
                         "endColumns": "12,12",
                         "endOffsets": "8070,8239"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\27746\\.gradle\\caches\\8.10.2\\transforms\\e0d9d3675465ff69d847e2f781f20c61\\transformed\\jetified-startup-runtime-1.1.1\\res\\values\\values.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "82",
-                        "endOffsets": "133"
-                    },
-                    "to": {
-                        "startLines": "146",
-                        "startColumns": "4",
-                        "startOffsets": "7229",
-                        "endColumns": "82",
-                        "endOffsets": "7307"
                     }
                 }
             ]
