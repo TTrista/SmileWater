@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'history_records_list.dart';
-//import 'history_bar_chart.dart';
+import 'history_chart.dart'; // 新页面记得创建！
 
 class HistoryPage extends StatelessWidget {
   const HistoryPage({super.key});
@@ -9,20 +9,15 @@ class HistoryPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'History Records',
-          style: TextStyle(color: Colors.black, fontWeight: FontWeight.w600),
-        ),
+        title: const Text('History'),
         backgroundColor: Colors.white,
-        elevation: 0,
-        centerTitle: false,
-        iconTheme: const IconThemeData(color: Colors.black),
+        foregroundColor: Colors.black,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // 👉 第一张卡片：记录列表
             GestureDetector(
               onTap: () {
                 Navigator.push(
@@ -37,14 +32,14 @@ class HistoryPage extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
+                child: const Padding(
+                  padding: EdgeInsets.all(16.0),
                   child: Row(
-                    children: const [
+                    children: [
                       Icon(Icons.list, color: Colors.white, size: 36),
                       SizedBox(width: 16),
                       Text(
-                        'history records list',
+                        'History Records List',
                         style: TextStyle(color: Colors.white, fontSize: 18),
                       ),
                     ],
@@ -52,58 +47,42 @@ class HistoryPage extends StatelessWidget {
                 ),
               ),
             ),
+
             const SizedBox(height: 20),
-            // GestureDetector(
-            //   onTap: () {
-            //     Navigator.push(
-            //       context,
-            //       MaterialPageRoute(builder: (context) => const HistoryBarChartPage()),
-            //     );
-            //   },
-            //   child: Card(
-            //     color: Colors.black,
-            //     shape: RoundedRectangleBorder(
-            //       borderRadius: BorderRadius.circular(12),
-            //     ),
-            //     child: Padding(
-            //       padding: const EdgeInsets.all(16.0),
-            //       child: Row(
-            //         children: const [
-            //           Icon(Icons.bar_chart, color: Colors.white, size: 36),
-            //           SizedBox(width: 16),
-            //           Text(
-            //             'history bar chart',
-            //             style: TextStyle(color: Colors.white, fontSize: 18),
-            //           ),
-            //         ],
-            //       ),
-            //     ),
-            //   ),
-            // ),
+
+            // 👉 第二张卡片：图表页面
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const HistoryChartPage(),
+                  ),
+                );
+              },
+              child: Card(
+                color: Colors.teal[700],
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: const Padding(
+                  padding: EdgeInsets.all(16.0),
+                  child: Row(
+                    children: [
+                      Icon(Icons.show_chart, color: Colors.white, size: 36),
+                      SizedBox(width: 16),
+                      Text(
+                        'History Chart',
+                        style: TextStyle(color: Colors.white, fontSize: 18),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   currentIndex: 0,
-      //   onTap: (index) {
-      //     if (index == 1) Navigator.pushNamed(context, '/home');
-      //     else if (index == 2) Navigator.pushNamed(context, '/profile');
-      //   },
-      //   items: const [
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.history_edu),
-      //       label: 'History',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.home_rounded),
-      //       label: 'Home',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.emoji_emotions),
-      //       label: 'Me',
-      //     ),
-      //   ],
-      // ),
     );
   }
 }

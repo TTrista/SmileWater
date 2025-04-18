@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
-import 'splash_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 import 'home_page.dart';
 import 'history_page.dart';
 import 'profile_page.dart';
+import 'splash_screen.dart';
+import 'models/history_entry.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const SmileWaterApp());
 }
 
@@ -25,7 +30,6 @@ class SmileWaterApp extends StatelessWidget {
   }
 }
 
-// 启动画面控制器：显示 splash，然后跳转主页
 class SplashScreenWrapper extends StatefulWidget {
   const SplashScreenWrapper({super.key});
 
@@ -48,11 +52,10 @@ class _SplashScreenWrapperState extends State<SplashScreenWrapper> {
 
   @override
   Widget build(BuildContext context) {
-    return _showMain ? const MainNavigationPage() :  SplashScreen();
+    return _showMain ? const MainNavigationPage() : SplashScreen();
   }
 }
 
-// 主界面带底部导航，使用 IndexedStack 保持页面状态
 class MainNavigationPage extends StatefulWidget {
   const MainNavigationPage({super.key});
 
@@ -62,20 +65,24 @@ class MainNavigationPage extends StatefulWidget {
 
 class _MainNavigationPageState extends State<MainNavigationPage> {
   int _currentIndex = 1;
+  List<HistoryEntry> _records = [];
 
-  final List<Widget> _pages = const [
-    HistoryPage(),
-    HomePage(),
-    ProfilePage(),
-  ];
+  void _addRecord(HistoryEntry entry) {
+    setState(() {
+      _records.insert(0, entry); // 新记录放最上面
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
+    final List<Widget> _pages = [
+      const HistoryPage(), // 不需要传参数了
+      HomePage(onNewRecord: _addRecord),
+      const ProfilePage(),
+    ];
+
     return Scaffold(
-      body: IndexedStack(
-        index: _currentIndex,
-        children: _pages,
-      ),
+      body: IndexedStack(index: _currentIndex, children: _pages),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         selectedItemColor: Colors.blueAccent,
@@ -86,9 +93,18 @@ class _MainNavigationPageState extends State<MainNavigationPage> {
           });
         },
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.history_edu), label: 'History'),
-          BottomNavigationBarItem(icon: Icon(Icons.home_rounded), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.emoji_emotions), label: 'Me'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.history_edu),
+            label: 'History',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home_rounded),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.emoji_emotions),
+            label: 'Me',
+          ),
         ],
       ),
     );

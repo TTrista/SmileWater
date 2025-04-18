@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "368195730231",
+    "project_id": "smilewater-24a5f",
+    "storage_bucket": "smilewater-24a5f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:368195730231:android:5d241705031a10b506b8b2",
+        "android_client_info": {
+          "package_name": "com.example.smilewater2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkJ-40h2M-8ObDpd792ZwdQL12-kzVDFo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

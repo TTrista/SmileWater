@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="gcm_defaultSenderId" translatable="false">368195730231</string>
+    <string name="google_api_key" translatable="false">AIzaSyBkJ-40h2M-8ObDpd792ZwdQL12-kzVDFo</string>
+    <string name="google_app_id" translatable="false">1:368195730231:android:5d241705031a10b506b8b2</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBkJ-40h2M-8ObDpd792ZwdQL12-kzVDFo</string>
+    <string name="google_storage_bucket" translatable="false">smilewater-24a5f.firebasestorage.app</string>
+    <string name="project_id" translatable="false">smilewater-24a5f</string>
     <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
         
         <item name="android:windowBackground">@drawable/launch_background</item>
