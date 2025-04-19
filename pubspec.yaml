@@ -41,13 +41,14 @@ dependencies:
   firebase_ui_auth: ^1.16.1
   fl_chart: ^0.64.0
   flutter_launcher_icons: ^0.13.1
+  flutter_reactive_ble: ^5.0.2
+  permission_handler: ^11.3.1
+  intl: ^0.19.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_reactive_ble: ^5.0.2
-  permission_handler: ^11.3.1
-  intl: ^0.19.0
+ 
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
