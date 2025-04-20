@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'history_records_list.dart';
-import 'history_chart.dart'; // 新页面记得创建！
+import 'history_chart.dart';
 
 class HistoryPage extends StatelessWidget {
   const HistoryPage({super.key});
@@ -8,78 +8,92 @@ class HistoryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFFF7FAFC),
       appBar: AppBar(
         title: const Text('History'),
-        backgroundColor: Colors.white,
-        foregroundColor: Colors.black,
+        backgroundColor: Color.fromARGB(255, 60, 106, 156), 
+        foregroundColor: Colors.white,
+        centerTitle: true,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(24),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // 👉 第一张卡片：记录列表
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const HistoryRecordsListPage(),
+            const Text(
+              'Select what you want to view',
+              style: TextStyle(fontSize: 16, color: Colors.grey),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 80), // 
+            Expanded(
+              child: GridView.count(
+                crossAxisCount: 2,
+                crossAxisSpacing: 20,
+                mainAxisSpacing: 20,
+                children: [
+                  _buildGridCard(
+                    context: context,
+                    title: 'Records',
+                    icon: Icons.list_alt,
+                    color: Colors.teal[400]!,
+                    destination: const HistoryRecordsListPage(),
                   ),
-                );
-              },
-              child: Card(
-                color: Colors.black,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: const Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: Row(
-                    children: [
-                      Icon(Icons.list, color: Colors.white, size: 36),
-                      SizedBox(width: 16),
-                      Text(
-                        'History Records List',
-                        style: TextStyle(color: Colors.white, fontSize: 18),
-                      ),
-                    ],
+                  _buildGridCard(
+                    context: context,
+                    title: 'Chart',
+                    icon: Icons.show_chart,
+                    color: Colors.teal[200]!,
+                    destination: const HistoryChartPage(),
                   ),
-                ),
+                ],
               ),
             ),
+          ],
+        ),
+      ),
+    );
+  }
 
-            const SizedBox(height: 20),
-
-            // 👉 第二张卡片：图表页面
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const HistoryChartPage(),
-                  ),
-                );
-              },
-              child: Card(
-                color: Colors.teal[700],
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: const Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: Row(
-                    children: [
-                      Icon(Icons.show_chart, color: Colors.white, size: 36),
-                      SizedBox(width: 16),
-                      Text(
-                        'History Chart',
-                        style: TextStyle(color: Colors.white, fontSize: 18),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+  Widget _buildGridCard({
+    required BuildContext context,
+    required String title,
+    required IconData icon,
+    required Color color,
+    required Widget destination,
+  }) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => destination),
+        );
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          color: color,
+          borderRadius: BorderRadius.circular(20),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black12,
+              blurRadius: 6,
+              offset: Offset(0, 4),
             ),
+          ],
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(icon, color: Colors.white, size: 48),
+            const SizedBox(height: 12),
+            Text(
+              title,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            )
           ],
         ),
       ),

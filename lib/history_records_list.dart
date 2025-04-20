@@ -78,16 +78,16 @@ class _HistoryRecordsListPageState extends State<HistoryRecordsListPage> {
       context: context,
       builder:
           (context) => AlertDialog(
-            title: const Text('确认删除'),
-            content: const Text('你确定要删除这条历史记录吗？此操作不可恢复。'),
+            title: const Text('Confirm Deletion'),
+            content: const Text('Are you sure you want to delete this record? This action cannot be undone.'),
             actions: [
               TextButton(
                 onPressed: () => Navigator.pop(context, false),
-                child: const Text('取消'),
+                child: const Text('Cancel'),
               ),
               TextButton(
                 onPressed: () => Navigator.pop(context, true),
-                child: const Text('删除', style: TextStyle(color: Colors.red)),
+                child: const Text('Delete', style: TextStyle(color: Colors.red)),
               ),
             ],
           ),
@@ -122,7 +122,7 @@ class _HistoryRecordsListPageState extends State<HistoryRecordsListPage> {
         if (user == null) {
           return Scaffold(
             appBar: AppBar(
-              title: const Text('历史记录'),
+              title: const Text('	History Records'),
               backgroundColor: Colors.white,
               foregroundColor: Colors.black,
               elevation: 1,
@@ -130,11 +130,11 @@ class _HistoryRecordsListPageState extends State<HistoryRecordsListPage> {
             body: Center(
               child: RichText(
                 text: TextSpan(
-                  text: '请先 ',
+                  text: 'Please ',
                   style: const TextStyle(color: Colors.black, fontSize: 16),
                   children: [
                     TextSpan(
-                      text: '登录',
+                      text: 'Log in',
                       style: const TextStyle(
                         color: Colors.blue,
                         fontWeight: FontWeight.bold,
@@ -146,7 +146,7 @@ class _HistoryRecordsListPageState extends State<HistoryRecordsListPage> {
                               Navigator.pushNamed(context, '/profile');
                             },
                     ),
-                    const TextSpan(text: ' 以查看历史记录'),
+                    const TextSpan(text: ' 	to view records'),
                   ],
                 ),
               ),
@@ -162,7 +162,7 @@ class _HistoryRecordsListPageState extends State<HistoryRecordsListPage> {
   Widget _buildRecordsList() {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('历史记录'),
+        title: const Text('	History Records'),
         backgroundColor: Colors.white,
         foregroundColor: Colors.black,
         elevation: 1,
@@ -177,7 +177,7 @@ class _HistoryRecordsListPageState extends State<HistoryRecordsListPage> {
                   return _hasMore
                       ? TextButton(
                         onPressed: _loadMoreRecords,
-                        child: const Text('加载更多'),
+                        child: const Text('Load more'),
                       )
                       : const SizedBox();
                 }
@@ -193,11 +193,11 @@ class _HistoryRecordsListPageState extends State<HistoryRecordsListPage> {
                   child: ListTile(
                     contentPadding: const EdgeInsets.all(16),
                     title: Text(
-                      'pH: ${entry.ph.toStringAsFixed(2)}    浊度: ${entry.turbidity.toStringAsFixed(2)} NTU',
+                      'pH: ${entry.ph.toStringAsFixed(2)}    	Turbidity: ${entry.turbidity.toStringAsFixed(2)} NTU',
                       style: const TextStyle(fontWeight: FontWeight.bold),
                     ),
                     subtitle: Text(
-                      '时间：${entry.time.toString().substring(0, 16)}',
+                      '	Time: ${entry.time.toString().substring(0, 16)}',
                     ),
                     trailing: IconButton(
                       icon: const Icon(Icons.delete, color: Colors.red),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:cloud_firestore/cloud_firestore.dart'; // 新增
+import 'package:cloud_firestore/cloud_firestore.dart'; 
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -17,9 +17,9 @@ class _ProfilePageState extends State<ProfilePage> {
   String? _error;
   String _nickname = 'User';
 
-  final _firestore = FirebaseFirestore.instance; // Firestore 实例
+  final _firestore = FirebaseFirestore.instance; // Firestore
 
-  // 🔐 登录
+  // log in + load nickname
   Future<void> _signIn() async {
     try {
       final result = await FirebaseAuth.instance.signInWithEmailAndPassword(
@@ -34,7 +34,7 @@ class _ProfilePageState extends State<ProfilePage> {
     }
   }
 
-  // 🧑‍🎓 注册 + 保存初始昵称
+  // sign up + save initial nickname
   Future<void> _register() async {
     try {
       final result = await FirebaseAuth.instance.createUserWithEmailAndPassword(
@@ -44,7 +44,7 @@ class _ProfilePageState extends State<ProfilePage> {
       _emailCtrl.clear();
       _passwordCtrl.clear();
 
-      // 默认昵称为邮箱前缀
+      // Save the default nickname to Firestore
       final defaultNickname = _emailCtrl.text.trim().split('@')[0];
       await _firestore.collection('users').doc(result.user!.uid).set({
         'nickname': defaultNickname,
@@ -57,8 +57,7 @@ class _ProfilePageState extends State<ProfilePage> {
       setState(() => _error = e.message);
     }
   }
-
-  // ✉️ 密码重置
+  //Reset password
   Future<void> _resetPassword() async {
     if (_emailCtrl.text.isEmpty) {
       setState(() => _error = '请输入邮箱');
@@ -77,7 +76,7 @@ class _ProfilePageState extends State<ProfilePage> {
     }
   }
 
-  // 🔒 退出
+  // log out
   Future<void> _signOut() async {
     await FirebaseAuth.instance.signOut();
     setState(() {
@@ -85,7 +84,7 @@ class _ProfilePageState extends State<ProfilePage> {
     });
   }
 
-  // 🔁 加载昵称
+  // load nickname from Firestore
   Future<void> _loadNickname(User? user) async {
     if (user == null) return;
     final doc = await _firestore.collection('users').doc(user.uid).get();
@@ -96,17 +95,17 @@ class _ProfilePageState extends State<ProfilePage> {
     }
   }
 
-  // ✏️ 修改昵称
+  // Edit nickname
   void _editNickname() {
     showDialog(
       context: context,
       builder: (context) {
         final controller = TextEditingController(text: _nickname);
         return AlertDialog(
-          title: const Text('修改昵称'),
+          title: const Text('Edit nickname'),
           content: TextField(
             controller: controller,
-            decoration: const InputDecoration(hintText: '请输入昵称'),
+            decoration: const InputDecoration(hintText: 'Enter a nickname'),
           ),
           actions: [
             TextButton(
@@ -134,7 +133,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 }
                 Navigator.pop(context);
               },
-              child: const Text('保存'),
+              child: const Text('Save'),
             ),
           ],
         );
@@ -142,7 +141,7 @@ class _ProfilePageState extends State<ProfilePage> {
     );
   }
 
-  // 登录界面
+  // Authentication form
   Widget _buildAuthForm() {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -212,7 +211,7 @@ class _ProfilePageState extends State<ProfilePage> {
     );
   }
 
-  // 个人资料界面
+  // Profile view
   Widget _buildProfile(User user) {
     return Column(
       children: [
@@ -241,7 +240,7 @@ class _ProfilePageState extends State<ProfilePage> {
         ElevatedButton.icon(
           onPressed: _signOut,
           icon: const Icon(Icons.logout),
-          label: const Text('退出登录'),
+          label: const Text('Log Out'),
           style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
         ),
       ],
@@ -256,15 +255,16 @@ class _ProfilePageState extends State<ProfilePage> {
         final user = snapshot.data;
 
         if (user != null && _nickname == 'User') {
-          _loadNickname(user); // 仅首次加载
+          _loadNickname(user); // Load nickname if user is logged in
         }
 
         return Scaffold(
           backgroundColor: Colors.white,
           appBar: AppBar(
             title: const Text('Me'),
-            backgroundColor: Colors.white,
-            foregroundColor: Colors.black,
+            backgroundColor: Color.fromARGB(255, 60, 106, 156),
+            foregroundColor: Colors.white,
+            centerTitle: true,
             elevation: 1,
           ),
           body: Center(

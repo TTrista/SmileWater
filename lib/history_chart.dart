@@ -86,7 +86,7 @@ class _HistoryChartPageState extends State<HistoryChartPage> {
     if (user == null) {
       return Scaffold(
         appBar: AppBar(title: const Text('History Chart')),
-        body: const Center(child: Text('请先登录以查看图表')),
+        body: const Center(child: Text('Please log in to view the chart')),
       );
     }
 
@@ -97,21 +97,21 @@ class _HistoryChartPageState extends State<HistoryChartPage> {
           IconButton(
             icon: const Icon(Icons.date_range),
             onPressed: _pickDateRange,
-            tooltip: '选择时间范围',
+            tooltip: 'Select date range',
           ),
         ],
       ),
       body: _isLoading
           ? const Center(child: CircularProgressIndicator())
           : _filteredRecords.isEmpty
-              ? const Center(child: Text('所选时间段内无数据'))
+              ? const Center(child: Text('No data in the selected range'))
               : Padding(
                   padding: const EdgeInsets.all(12.0),
                   child: Column(
                     children: [
                       if (_selectedRange != null)
                         Text(
-                          '时间段: ${DateFormat('MM/dd').format(_selectedRange!.start)} - ${DateFormat('MM/dd').format(_selectedRange!.end)}',
+                          'Date Range:: ${DateFormat('MM/dd').format(_selectedRange!.start)} - ${DateFormat('MM/dd').format(_selectedRange!.end)}',
                           style: const TextStyle(color: Colors.grey),
                         ),
                       const SizedBox(height: 12),
@@ -122,7 +122,7 @@ class _HistoryChartPageState extends State<HistoryChartPage> {
                             borderData: FlBorderData(show: true),
                             titlesData: FlTitlesData(
                               leftTitles: AxisTitles(
-                                axisNameWidget: const Text('pH 值', style: TextStyle(fontSize: 12)),
+                                axisNameWidget: const Text('	pH Value', style: TextStyle(fontSize: 12)),
                                 sideTitles: SideTitles(
                                   showTitles: true,
                                   reservedSize: 30,
@@ -136,7 +136,7 @@ class _HistoryChartPageState extends State<HistoryChartPage> {
                                 ),
                               ),
                               rightTitles: AxisTitles(
-                                axisNameWidget: const Text('浊度 (NTU)', style: TextStyle(fontSize: 12)),
+                                axisNameWidget: const Text('Turbidity (NTU)', style: TextStyle(fontSize: 12)),
                                 sideTitles: SideTitles(
                                   showTitles: true,
                                   reservedSize: 36,
@@ -197,11 +197,11 @@ class _HistoryChartPageState extends State<HistoryChartPage> {
                         children: [
                           Icon(Icons.show_chart, color: Colors.blue),
                           SizedBox(width: 6),
-                          Text('pH 趋势'),
+                          Text('	pH Trend'),
                           SizedBox(width: 20),
                           Icon(Icons.show_chart, color: Colors.orange),
                           SizedBox(width: 6),
-                          Text('浊度趋势'),
+                          Text('Turbidity Trend'),
                         ],
                       ),
                     ],

@@ -22,9 +22,15 @@ class SmileWaterApp extends StatelessWidget {
       title: 'Smile Water',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        fontFamily: 'Nunito', // theme font
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
+        textTheme: const TextTheme(
+          bodyMedium: TextStyle(fontSize: 16),
+          headlineSmall: TextStyle(fontSize: 22, fontWeight: FontWeight.w800),
+        ),
       ),
+
       home: const SplashScreenWrapper(),
     );
   }
@@ -69,14 +75,14 @@ class _MainNavigationPageState extends State<MainNavigationPage> {
 
   void _addRecord(HistoryEntry entry) {
     setState(() {
-      _records.insert(0, entry); // 新记录放最上面
+      _records.insert(0, entry); 
     });
   }
 
   @override
   Widget build(BuildContext context) {
     final List<Widget> _pages = [
-      const HistoryPage(), // 不需要传参数了
+      const HistoryPage(), 
       HomePage(onNewRecord: _addRecord),
       const ProfilePage(),
     ];
@@ -87,6 +93,17 @@ class _MainNavigationPageState extends State<MainNavigationPage> {
         currentIndex: _currentIndex,
         selectedItemColor: Colors.blueAccent,
         unselectedItemColor: Colors.grey,
+
+        selectedLabelStyle: const TextStyle(
+          fontFamily: 'BubblegumSans', 
+          fontWeight: FontWeight.w600,
+          fontSize: 15,
+        ),
+        unselectedLabelStyle: const TextStyle(
+          fontFamily: 'BubblegumSans',
+          fontWeight: FontWeight.w400,
+          fontSize: 14,
+        ),
         onTap: (index) {
           setState(() {
             _currentIndex = index;
@@ -102,7 +119,7 @@ class _MainNavigationPageState extends State<MainNavigationPage> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.emoji_emotions),
+            icon: Icon(Icons.sentiment_satisfied_alt_rounded),
             label: 'Me',
           ),
         ],
