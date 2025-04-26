@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smile Water - Water Quality Monitoring App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #74b9ff, #a29bfe);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      text-align: center;
+    }
+    header {
+      margin-bottom: 40px;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 0 auto 30px auto;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+    .feature {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 12px;
+      width: 250px;
+    }
+    .feature h3 {
+      margin-top: 10px;
+      font-size: 1.4em;
+    }
+    .screenshot {
+      margin-bottom: 40px;
+    }
+    .screenshot img {
+      width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    footer {
+      font-size: 0.9em;
+      margin-top: 20px;
+    }
+    a.button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #0984e3;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    a.button:hover {
+      background-color: #74b9ff;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Smile Water 💧</h1>
+    <p>Smart water quality monitoring for outdoor adventures. Monitor pH and turbidity in real-time, anytime, anywhere!</p>
+    <a href="https://github.com/TTrista/SmileWater/actions/runs/14563261823/artifacts/2976615123" class="button">Download APK</a>
+  </header>
+
+  <section class="features">
+    <div class="feature">
+      <h3>📱Bluetooth Connection</h3>
+      <p>Seamlessly connect to the SmileWater device via BLE for real-time monitoring.</p>
+    </div>
+    <div class="feature">
+      <h3>📊 Real-Time Data</h3>
+      <p>Instantly view current pH levels and turbidity measurements on your phone.</p>
+    </div>
+    <div class="feature">
+      <h3>🗂️ History & Trends</h3>
+      <p>Access past measurements and analyze trends over time with interactive charts.</p>
+    </div>
+  </section>
+
+  <div class="screenshot">
+    <img src="screenshots/home.png" alt="Smile Water App Screenshot">
+  </div>
+
+  <footer>
+    <p>Developed by Zinan Ye | Contact: zinan.ye02@gmail.com</p>
+  </footer>
+</body>
+
+</html>
