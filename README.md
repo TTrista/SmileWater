@@ -1,23 +1,86 @@
-# Smile Water
+# 💧 Smile Water⭐
 
-This is the Final assessment template for CASA0014 - Please use this template and edit the relevant sections to personalise.
-This section has a short introduction to what the application is
+## 🤗Introdution
 
-## Use this README File 
+**Hi, Ladies and Gentlemen,boys and girls.** 👋👋👋
 
-Use this section to show us what your Mobile App is about.   Include a Screenshot to the App, link to the various frameworks you've used. Include your presentation video here that shows off your Mobile App.   Emojis are also fun to include 📱 😄
+**Smile Water💧** is a mobile application designed to assist users in quickly assessing water quality during outdoor activities.  
+Whether hiking, camping, or exploring nature, users can connect to the **SmileWater** Bluetooth device to monitor real-time **pH** and **Turbidity** levels, helping them determine whether the water is safe to drink or use.
 
-Look at some other Flutter Apps online and see how they use there README File.  Good examples are:
+**Smile Water💧** will take care of your health~!
 
-- https://github.com/miickel/flutter_particle_clock
-- https://github.com/Tarikul711/flutter-food-delivery-app-ui    
-- https://github.com/mohak1283/Instagram-Clone
+The app features a simple and intuitive interface that allows users to:
+- Connect seamlessly to the SmileWater BLE device.
+- Instantly view live pH values and turbidity measurements.
+- Access a full history of past measurements.
+- Visualize trends over time through interactive charts.
+- Filter historical data based on specific date ranges.
+
+> Developed as the final project for CASA0014 Mobile Systems Development.
+
+---
+
+## 🚀 Features
+
+- 📱 Bluetooth connection with **SmileWater** device
+- 🌟 Real-time display of pH and turbidity
+- 📊 History records list and detailed charts
+- 📅 Date range filter for historical data
+- 🎨 Clean, intuitive, and vibrant UI
+- 🛠 Built using **Flutter**, **Firebase**, and **fl_chart**
+
+---
+
+## 📸 Screenshots
+
+| History Records | Home Page | History Chart |
+|:---------:|:----------------:|:-------------:|
+| ![Home](screenshots/home.png) | ![Records](screenshots/records.png) | ![Chart](screenshots/chart.png) |
 
 
-## Include A Section That Tells Developers How To Install The App
 
-Include a section that gives intructions on how to install the app or run it in Flutter.  What versions of the plugins are you assuming?  Maybe define a licence
+---
 
-##  Contact Details
+## 🛠 Installation
+You have two options to experience the Smile Water app:
 
-Having Contact Details is also good as it shows people how to get in contact with you if they'd like to contribute to the app. 
+### 📥 Method 1: Download APK Directly
+
+- Simply download the APK file from the "Releases" section on the right sidebar of this GitHub page.
+- Install the APK on your Android device.
+- Open the app and start monitoring water quality immediately! 🚀
+
+---
+
+### 💡 Method 2: Run via Android Studio (Recommended for Developers)
+
+Follow these steps to set up and run the app manually:
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/TT/smile-water.git
+2. Navigate into the project directory:
+   ```bash
+   cd smile-water
+3. Install dependencies:
+   ```bash
+   flutter pub get
+4. Launch the application:
+   ```bash
+   flutter run
+✅ Make sure you have Flutter and Android Studio properly installed before running the app.
+
+---
+## 🎥 Demo Video
+
+
+
+---
+
+
+##  📬 Contact
+
+Created with ❤️ by Zinan Ye
+
+Email: your.email@example.com
+
+GitHub: https://github.com/yourusername
