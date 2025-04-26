@@ -147,7 +147,7 @@ class _ProfilePageState extends State<ProfilePage> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         const Text(
-          'Sign in',
+          'log in',
           style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: 10),
@@ -203,7 +203,7 @@ class _ProfilePageState extends State<ProfilePage> {
             padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 14),
           ),
           child: Text(
-            _authMode == 'login' ? 'Sign in' : 'Register',
+            _authMode == 'login' ? 'Log in' : 'Register',
             style: const TextStyle(color: Colors.white),
           ),
         ),
