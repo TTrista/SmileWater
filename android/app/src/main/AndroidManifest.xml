@@ -14,7 +14,7 @@
 
 
     <application
-        android:label="smilewater2"
+        android:label="smilewater"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

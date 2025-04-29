@@ -60,7 +60,7 @@ class _ProfilePageState extends State<ProfilePage> {
   //Reset password
   Future<void> _resetPassword() async {
     if (_emailCtrl.text.isEmpty) {
-      setState(() => _error = '请输入邮箱');
+      setState(() => _error = 'Please enter your email address');
       return;
     }
 
@@ -70,7 +70,7 @@ class _ProfilePageState extends State<ProfilePage> {
       );
       ScaffoldMessenger.of(
         context,
-      ).showSnackBar(const SnackBar(content: Text('重置邮件已发送')));
+      ).showSnackBar(const SnackBar(content: Text('Reset email sent')));
     } on FirebaseAuthException catch (e) {
       setState(() => _error = e.message);
     }
