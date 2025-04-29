@@ -1,0 +1,20 @@
+@echo off
+"C:\\AndoridSDK\\cmake\\3.22.1\\bin\\cmake.exe" ^
+  "-HC:\\Flutter\\flutter\\packages\\flutter_tools\\gradle\\src\\main\\groovy" ^
+  "-DCMAKE_SYSTEM_NAME=Android" ^
+  "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON" ^
+  "-DCMAKE_SYSTEM_VERSION=23" ^
+  "-DANDROID_PLATFORM=android-23" ^
+  "-DANDROID_ABI=x86_64" ^
+  "-DCMAKE_ANDROID_ARCH_ABI=x86_64" ^
+  "-DANDROID_NDK=C:\\AndoridSDK\\ndk\\26.3.11579264" ^
+  "-DCMAKE_ANDROID_NDK=C:\\AndoridSDK\\ndk\\26.3.11579264" ^
+  "-DCMAKE_TOOLCHAIN_FILE=C:\\AndoridSDK\\ndk\\26.3.11579264\\build\\cmake\\android.toolchain.cmake" ^
+  "-DCMAKE_MAKE_PROGRAM=C:\\AndoridSDK\\cmake\\3.22.1\\bin\\ninja.exe" ^
+  "-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=D:\\UCL\\CASA0015\\CW\\SmileWater\\build\\app\\intermediates\\cxx\\Debug\\5g1z6312\\obj\\x86_64" ^
+  "-DCMAKE_RUNTIME_OUTPUT_DIRECTORY=D:\\UCL\\CASA0015\\CW\\SmileWater\\build\\app\\intermediates\\cxx\\Debug\\5g1z6312\\obj\\x86_64" ^
+  "-DCMAKE_BUILD_TYPE=Debug" ^
+  "-BD:\\UCL\\CASA0015\\CW\\SmileWater\\android\\app\\.cxx\\Debug\\5g1z6312\\x86_64" ^
+  -GNinja ^
+  -Wno-dev ^
+  --no-warn-unused-cli
