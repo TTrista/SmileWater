@@ -16,7 +16,7 @@ The app features a simple and intuitive interface that allows users to:
 - Visualize trends over time through interactive charts.
 - Filter historical data based on specific date ranges.
 
-> Developed as the final project for CASA0014 Mobile Systems Development.
+> Developed as the final project for CASA0015 Mobile Systems Development.
 
 ---
 
@@ -33,11 +33,18 @@ The app features a simple and intuitive interface that allows users to:
 
 ## 📸 Screenshots
 
-| History Records | Home Page | History Chart |
-|:---------:|:----------------:|:-------------:|
-| ![Home](screenshots/home.png) | ![Records](screenshots/records.png) | ![Chart](screenshots/chart.png) |
+![Screen1](./Assets/imgs/R1.png) 
+![Screen2](./Assets/imgs/R2.png) 
 
 
+---
+## 🎥 Demo Video
+
+![VideoCover](./Assets/imgs/video-cover.jpg)
+---
+## 💻 Landing Page
+
+- 🖱Click here to see the landing page
 
 ---
 
@@ -46,7 +53,7 @@ You have two options to experience the Smile Water app:
 
 ### 📥 Method 1: Download APK Directly
 
-- Simply download the APK file from the "Releases" section on the right sidebar of this GitHub page.
+- Simply download the APK file from the  [Releases](https://github.com/TTrista/SmileWater/releases)  section on the right sidebar of this GitHub page.
 - Install the APK on your Android device.
 - Open the app and start monitoring water quality immediately! 🚀
 
@@ -57,7 +64,7 @@ You have two options to experience the Smile Water app:
 Follow these steps to set up and run the app manually:
 1. Clone this repository:
    ```bash
-   git clone https://github.com/TT/smile-water.git
+   git clone https://github.com/TTrista/SmileWater.git
 2. Navigate into the project directory:
    ```bash
    cd smile-water
@@ -70,7 +77,27 @@ Follow these steps to set up and run the app manually:
 ✅ Make sure you have Flutter and Android Studio properly installed before running the app.
 
 ---
-## 🎥 Demo Video
+## 📅 Plugins & Versions
+
+- `cupertino_icons: ^1.0.8`
+- `firebase_core: ^3.13.0`
+- `firebase_auth: ^5.5.2`
+- `cloud_firestore: ^5.6.6`
+- `provider: ^6.1.4`
+- `firebase_ui_auth: ^1.16.1`
+- `fl_chart: ^0.64.0`
+- `flutter_launcher_icons: ^0.13.1`
+- `flutter_reactive_ble: ^5.0.2`
+- `permission_handler: ^11.3.1`
+- `intl: ^0.19.0`
+
+*(Check `pubspec.yaml` for the full list)*
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 
 
@@ -79,8 +106,8 @@ Follow these steps to set up and run the app manually:
 
 ##  📬 Contact
 
-Created with ❤️ by Zinan Ye
+Created with ❤️ by Trista
 
-Email: your.email@example.com
+Email: zinan.ye02@gmail.com
 
-GitHub: https://github.com/yourusername
+GitHub: [TTrista](https://github.com/TTrista)
